@@ -252,6 +252,184 @@ export const LearningModule: React.FC<LearningModuleProps> = ({
               ))}
             </div>
 
+            {/* Special Section: Buku Teks Informatika SMP Kelas VIII Hal. 62 */}
+            {selectedLesson.id === 'k8-ap-1' && (
+              <div className="p-5 bg-gradient-to-b from-slate-900 via-slate-900/90 to-[#070a1a] border border-cyan-500/40 rounded-xl space-y-5">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-800 pb-3">
+                  <div className="flex items-center gap-2 text-xs font-mono text-cyan-400 font-semibold">
+                    <Sparkles className="w-4 h-4" />
+                    <span>BUKU TEKS INFORMATIKA SMP/MTs KELAS VIII · HALAMAN 62</span>
+                  </div>
+                  <span className="text-[11px] font-mono text-purple-400 bg-purple-950/60 border border-purple-500/30 px-2 py-0.5 rounded">
+                    Gambar 2.16 Ilustrasi Tumpukan LIFO
+                  </span>
+                </div>
+
+                {/* Paragraf Pengantar Sesuai Buku */}
+                <p className="text-xs text-slate-300 leading-relaxed italic bg-slate-950/50 p-3 rounded-lg border border-slate-800">
+                  "Konsep stack ini dalam kehidupan sehari-hari mirip dengan tumpukan buku. Yang mana apabila buku yang terakhir diletakkan di atas tumpukan, maka yang terakhir yang dapat diambil terlebih dahulu, kemudian dilanjut dengan tumpukan berikutnya. Terdapat beberapa operasi pada stack sebagai berikut."
+                </p>
+
+                {/* Diagram Bola Masuk Tabung & Urutan Keluar */}
+                <div className="bg-[#050713] border border-slate-800 rounded-xl p-5 flex flex-col items-center">
+                  <div className="text-center font-mono text-xs text-slate-300 mb-4">
+                    Bola dimasukkan kedalam tabung sesuai dengan urutan dari nomor 1 sampai dengan 4:
+                  </div>
+
+                  {/* Urutan Masuk Bola */}
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="flex items-center justify-center w-10 h-10 rounded-full bg-blue-600 text-white font-bold font-mono text-sm shadow-md shadow-blue-500/30">
+                      1
+                    </div>
+                    <div className="flex items-center justify-center w-10 h-10 rounded-full bg-amber-400 text-slate-950 font-bold font-mono text-sm shadow-md shadow-amber-400/30">
+                      2
+                    </div>
+                    <div className="flex items-center justify-center w-10 h-10 rounded-full bg-emerald-500 text-slate-950 font-bold font-mono text-sm shadow-md shadow-emerald-500/30">
+                      3
+                    </div>
+                    <div className="flex items-center justify-center w-10 h-10 rounded-full bg-rose-600 text-white font-bold font-mono text-sm shadow-md shadow-rose-600/30">
+                      4
+                    </div>
+                    <span className="text-xs font-mono text-cyan-400 pl-1">➔ Masuk ke Tabung</span>
+                  </div>
+
+                  {/* Tabung Silinder dan Panah Keluar */}
+                  <div className="flex items-center justify-center gap-6 w-full max-w-lg">
+                    {/* Tabung Vertikal */}
+                    <div className="w-24 border-2 border-slate-600 border-t-0 rounded-b-2xl p-2 bg-slate-900/60 flex flex-col-reverse gap-2 shadow-inner">
+                      {/* Bola 1 */}
+                      <div className="flex items-center justify-center w-full h-12 rounded-full bg-blue-600 text-white font-bold font-mono text-sm shadow-inner">
+                        1
+                      </div>
+                      {/* Bola 2 */}
+                      <div className="flex items-center justify-center w-full h-12 rounded-full bg-amber-400 text-slate-950 font-bold font-mono text-sm shadow-inner">
+                        2
+                      </div>
+                      {/* Bola 3 */}
+                      <div className="flex items-center justify-center w-full h-12 rounded-full bg-emerald-500 text-slate-950 font-bold font-mono text-sm shadow-inner">
+                        3
+                      </div>
+                      {/* Bola 4 (TOP) */}
+                      <div className="flex items-center justify-center w-full h-12 rounded-full bg-rose-600 text-white font-bold font-mono text-sm shadow-inner ring-2 ring-rose-400">
+                        4
+                      </div>
+                    </div>
+
+                    {/* Panah Urutan Keluar */}
+                    <div className="flex flex-col justify-between h-56 py-1 space-y-2 text-xs font-mono">
+                      {/* Keluar 1: Bola 4 */}
+                      <div className="flex items-center gap-2 text-rose-300">
+                        <ArrowRight className="w-4 h-4 text-rose-400 shrink-0" />
+                        <span className="font-semibold">Menjadi Urutan Pertama yang akan diambil/dikeluarkan</span>
+                      </div>
+                      {/* Keluar 2: Bola 3 */}
+                      <div className="flex items-center gap-2 text-emerald-300">
+                        <ArrowRight className="w-4 h-4 text-emerald-400 shrink-0" />
+                        <span className="font-semibold">Menjadi Urutan Kedua yang akan diambil/dikeluarkan</span>
+                      </div>
+                      {/* Keluar 3: Bola 2 */}
+                      <div className="flex items-center gap-2 text-amber-300">
+                        <ArrowRight className="w-4 h-4 text-amber-400 shrink-0" />
+                        <span className="font-semibold">Menjadi Urutan Ketiga yang akan diambil/dikeluarkan</span>
+                      </div>
+                      {/* Keluar 4: Bola 1 */}
+                      <div className="flex items-center gap-2 text-blue-300">
+                        <ArrowRight className="w-4 h-4 text-blue-400 shrink-0" />
+                        <span className="font-semibold">Menjadi Urutan Keempat yang akan diambil/dikeluarkan</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="text-[11px] font-mono text-slate-400 mt-4 text-center">
+                    Gambar 2.16 Ilustrasi Tumpukan LIFO (Last In First Out)
+                  </div>
+                </div>
+
+                {/* Tabel Operasi Pada Stack Sesuai Buku Halaman 62 */}
+                <div className="space-y-2">
+                  <div className="text-xs font-mono text-cyan-400 uppercase tracking-wider font-semibold">
+                    Tabel Operasi Pada Stack (Buku Teks Hal. 62):
+                  </div>
+                  <div className="overflow-x-auto border border-slate-800 rounded-lg">
+                    <table className="w-full text-left font-sans text-xs">
+                      <thead className="bg-slate-950 text-slate-400 border-b border-slate-800 font-mono">
+                        <tr>
+                          <th className="py-2.5 px-3 w-32">Nama Operasi</th>
+                          <th className="py-2.5 px-3">Penjelasan Resmi Buku Paket</th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-slate-800/80">
+                        <tr className="hover:bg-slate-800/30">
+                          <td className="py-2.5 px-3">
+                            <span className="px-2.5 py-1 rounded bg-sky-950/80 border border-sky-400/50 text-sky-300 font-mono font-bold inline-block">
+                              Push
+                            </span>
+                          </td>
+                          <td className="py-2.5 px-3 text-slate-200">
+                            <strong>Push</strong> merupakan operasi yang digunakan untuk menambahkan elemen baru ke dalam stack pada posisi teratas.
+                          </td>
+                        </tr>
+
+                        <tr className="hover:bg-slate-800/30">
+                          <td className="py-2.5 px-3">
+                            <span className="px-2.5 py-1 rounded bg-amber-950/80 border border-amber-400/50 text-amber-300 font-mono font-bold inline-block">
+                              Pop
+                            </span>
+                          </td>
+                          <td className="py-2.5 px-3 text-slate-200">
+                            <strong>Pop</strong> merupakan operasi yang digunakan untuk menghapus elemen teratas dari stack dan mengembalikan nilainya.
+                          </td>
+                        </tr>
+
+                        <tr className="hover:bg-slate-800/30">
+                          <td className="py-2.5 px-3">
+                            <span className="px-2.5 py-1 rounded bg-rose-950/80 border border-rose-400/50 text-rose-300 font-mono font-bold inline-block">
+                              isEmpty/Top
+                            </span>
+                          </td>
+                          <td className="py-2.5 px-3 text-slate-200">
+                            <strong>isEmpty atau Top</strong> merupakan operasi yang digunakan untuk mengecek elemen teratas dari stack tanpa menghapusnya.
+                          </td>
+                        </tr>
+
+                        <tr className="hover:bg-slate-800/30">
+                          <td className="py-2.5 px-3">
+                            <span className="px-2.5 py-1 rounded bg-emerald-950/80 border border-emerald-400/50 text-emerald-300 font-mono font-bold inline-block">
+                              isEmpty
+                            </span>
+                          </td>
+                          <td className="py-2.5 px-3 text-slate-200">
+                            <strong>isEmpty</strong> merupakan operasi yang digunakan untuk memeriksa apakah stack kosong atau tidak.
+                          </td>
+                        </tr>
+
+                        <tr className="hover:bg-slate-800/30">
+                          <td className="py-2.5 px-3">
+                            <span className="px-2.5 py-1 rounded bg-purple-950/80 border border-purple-400/50 text-purple-300 font-mono font-bold inline-block">
+                              Size
+                            </span>
+                          </td>
+                          <td className="py-2.5 px-3 text-slate-200">
+                            <strong>Size</strong> merupakan operasi yang digunakan untuk mengembalikan jumlah elemen dalam stack.
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                {/* Manfaat Nyata Stack Sesuai Paragraf Akhir Halaman 62 */}
+                <div className="p-3.5 bg-slate-950/80 border border-slate-800 rounded-lg text-xs space-y-1.5">
+                  <div className="text-cyan-400 font-mono font-semibold">
+                    Manfaat Stack Dalam Komputer dan Kehidupan Sehari-hari:
+                  </div>
+                  <p className="text-slate-300 leading-relaxed">
+                    "Konsep stack sangat bermanfaat dalam bidang komputer maupun dalam kehidupan sehari hari, misalnya penggunaan <strong>undo</strong> dalam aplikasi, <strong>penyimpanan data pada alamat memori komputer</strong>, <strong>perhitungan ekspresi dalam aritmetika</strong>, <strong>pengurutan barang</strong>, <strong>navigasi browser</strong>, dan <strong>pengelolaan buku pada perpustakaan</strong>."
+                  </p>
+                </div>
+              </div>
+            )}
+
             {/* Real World Analogy Box */}
             <div className="p-4 bg-slate-900/90 border border-purple-500/30 rounded-xl space-y-1.5">
               <div className="flex items-center gap-2 text-xs font-mono text-purple-400">

@@ -86,10 +86,21 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
     grade: 'kelas-8',
     topicId: 'k8-ap-1',
     strand: 'AP',
-    question: 'Perhatikan urutan operasi Stack berikut: Push("Data_A"), Push("Data_B"), Push("Data_C"), Pop(). Elemen apakah yang sekarang berada di posisi paling atas (TOP) dari Stack?',
-    options: ['Data_A', 'Data_B', 'Data_C', 'Stack kosong'],
-    correctIndex: 1,
-    explanation: 'Pembahasan Alur Eksekusi:\n1. Push("Data_A") -> Stack: [Data_A]\n2. Push("Data_B") -> Stack: [Data_A, Data_B]\n3. Push("Data_C") -> Stack: [Data_A, Data_B, Data_C]\n4. Operasi Pop() mengeluarkan elemen teratas yang terakhir masuk (LIFO), yaitu "Data_C".\nSekarang elemen teratas (TOP) adalah "Data_B"!',
+    question: 'Berdasarkan Buku Siswa Informatika Kelas VIII Hal. 62 (Gambar 2.16), jika 4 bola dimasukkan ke dalam tabung secara berurutan mulai dari nomor 1, 2, 3, hingga 4, bola nomor berapakah yang menjadi urutan PERTAMA yang akan diambil/dikeluarkan?',
+    options: ['Bola nomor 1', 'Bola nomor 2', 'Bola nomor 3', 'Bola nomor 4'],
+    correctIndex: 3,
+    explanation: 'Pembahasan: Berdasarkan prinsip LIFO (Last In First Out) pada Gambar 2.16 Buku Siswa Hal. 62, bola nomor 4 adalah bola yang terakhir dimasukkan ke dalam tabung. Karena tabung hanya memiliki satu pintu bukaan di atas, maka bola nomor 4 berada di posisi paling atas (TOP) dan menjadi urutan pertama yang akan diambil/dikeluarkan!',
+    difficulty: 'Dasar'
+  },
+  {
+    id: 'q-k8-4b',
+    grade: 'kelas-8',
+    topicId: 'k8-ap-1',
+    strand: 'AP',
+    question: 'Pada tabel operasi stack di Buku Paket Informatika SMP Kelas VIII Hal. 62, operasi yang digunakan untuk mengecek elemen teratas dari stack tanpa menghapusnya dinamakan...',
+    options: ['Push', 'Pop', 'isEmpty / Top', 'Size'],
+    correctIndex: 2,
+    explanation: 'Pembahasan: Sesuai Buku Siswa Informatika Kelas VIII Halaman 62, operasi isEmpty atau Top digunakan untuk mengecek elemen teratas dari stack tanpa menghapusnya. Sedangkan Push untuk menambah elemen, Pop untuk menghapus elemen teratas dan mengembalikan nilainya, serta Size untuk mengembalikan jumlah total elemen.',
     difficulty: 'Menengah'
   },
   {

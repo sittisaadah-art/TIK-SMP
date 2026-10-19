@@ -142,20 +142,23 @@ export const CURRICULUM_DATA: LessonTopic[] = [
     id: 'k8-ap-1',
     grade: 'kelas-8',
     strand: 'AP',
-    title: 'Struktur Data Linear: Stack (Tumpukan) & Queue (Antrean)',
+    title: 'Struktur Data Linear: Stack (Tumpukan LIFO) & Operasi-Operasinya',
     estimatedMinutes: 35,
-    summary: 'Membedakan prinsip kerja LIFO (Last In, First Out) pada Stack dan FIFO (First In, First Out) pada Queue beserta operasi lengkapnya.',
+    summary: 'Materi resmi Informatika SMP/MTs Kelas VIII Hal. 62: Memahami konsep tumpukan LIFO melalui ilustrasi bola 1-4 dalam tabung, tumpukan buku, serta 5 operasi utama stack (Push, Pop, isEmpty/Top, isEmpty, Size).',
     keyConcepts: [
-      'Stack (LIFO): Elemen yang TERAKHIR dimasukkan adalah yang PERTAMA dikeluarkan. Operasi: push, pop, top/peek, isEmpty, size.',
-      'Queue (FIFO): Elemen yang PERTAMA masuk adalah yang PERTAMA dilayani/keluar. Operasi: enqueue, dequeue, front, rear, isFull, isEmpty.',
-      'Kapasitas & Overflow: Kondisi ketika struktur data penuh (isFull) dan tidak dapat menampung elemen baru lagi.'
+      'Ilustrasi Tabung Bola LIFO: Bola dimasukkan ke tabung urut nomor 1 (biru), 2 (kuning), 3 (hijau), hingga 4 (merah). Saat dikeluarkan, Bola 4 yang terakhir masuk menjadi yang pertama diambil.',
+      'Push: Operasi yang digunakan untuk menambahkan elemen baru ke dalam stack pada posisi teratas.',
+      'Pop: Operasi yang digunakan untuk menghapus elemen teratas dari stack dan mengembalikan nilainya.',
+      'isEmpty/Top: Operasi yang digunakan untuk mengecek elemen teratas dari stack tanpa menghapusnya.',
+      'isEmpty: Operasi yang digunakan untuk memeriksa apakah stack kosong atau tidak.',
+      'Size: Operasi yang digunakan untuk mengembalikan jumlah elemen dalam stack.'
     ],
     contentMarkdown: [
-      'Stack sangat penting di dunia software: fitur Undo/Redo di Microsoft Word atau riwayat Back tombol browser menyimpan halaman dalam Stack!',
-      'Queue digunakan dalam penjadwalan proses CPU, antrean antarmuka printer kantor (spooling), dan server multiplayer game online saat menunggu giliran matchmaking.',
-      'Coba langsung simulasi interaktif Stack & Queue di Lab untuk merasakan visual animasi Push, Pop, Enqueue, dan Dequeue!'
+      'Konsep stack ini dalam kehidupan sehari-hari mirip dengan tumpukan buku. Yang mana apabila buku yang terakhir diletakkan di atas tumpukan, maka yang terakhir yang dapat diambil terlebih dahulu, kemudian dilanjut dengan tumpukan berikutnya.',
+      'Gambar 2.16 Ilustrasi Tumpukan LIFO (Last In First Out): Ketika bola dimasukkan ke dalam tabung sesuai dengan urutan dari nomor 1 sampai dengan 4, maka Bola 4 menjadi urutan pertama yang akan diambil/dikeluarkan, disusul Bola 3 (kedua), Bola 2 (ketiga), dan Bola 1 (keempat/terakhir).',
+      'Manfaat Stack dalam Komputer dan Kehidupan: Penggunaan fitur Undo (membatalkan aksi terakhir) dalam aplikasi, penyimpanan data pada alamat memori komputer (call stack), perhitungan ekspresi dalam aritmetika (notasi postfix), pengurutan barang di gudang, navigasi riwayat tombol Back browser, dan pengelolaan buku pada perpustakaan.'
     ],
-    realWorldAnalogy: 'Stack = Tumpukan piring prasmanan (piring teratas diambil dulu). Queue = Antrean kasir bioskop (yang datang duluan dilayani duluan).',
+    realWorldAnalogy: 'Tumpukan buku di meja belajar atau bola nomor 1-4 yang dimasukkan ke tabung silinder transparan (Buku Paket Informatika SMP Kelas VIII Hal. 62).',
     hasSimulation: 'stack-queue'
   },
   {
