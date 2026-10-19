@@ -1,0 +1,6 @@
+{
+  "name": "CyberInformatika SMP: Interactive Lab & Learning Portal",
+  "description": "Portal pembelajaran Informatika SMP Kelas VII, VIII, IX interaktif dengan simulasi 3D gerbang logika, konversi biner, visualisasi stack & queue, materi komprehensif, latihan soal otomatis, serta mode guru dan siswa bertema cyber.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
